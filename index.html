@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Centro de Estética</title>
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="Style/style.css">
+    <link rel="stylesheet" href="Style/styleResp.css">
+    <script src="jQuery/jquery-3.7.1.min.js"></script>
+    <script src="JS/js.js"></script>
+
+</head>
+<style>
+    #primerP::first-letter {
+        font-size: 4em;
+        font-weight: bold;
+        font-style: italic;
+        color: goldenrod;  
+    }
+
+    #depie {
+        animation: 5s depie;
+    }
+
+    @keyframes depie {
+        0% {
+
+            opacity: 0.1;
+
+        }
+
+        10% {
+
+            opacity: 0.2;
+
+        }
+
+        25% {
+
+            opacity: 0.3;
+
+        }
+
+        40% {
+
+            opacity: 0.4;
+
+        }
+
+        50% {
+
+            opacity: 0.5;
+
+        }
+
+        60% {
+
+            opacity: 0.6;
+
+        }
+
+        75% {
+
+            opacity: 0.7;
+        }
+
+        90% {
+
+            opacity: 0.8;
+        }
+
+        100% {
+
+            opacity: 1;
+        }
+
+    }
+
+    #depie li {
+        list-style-type: none;
+    }
+
+    #depie li:before {
+        content: "";
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background: url(Images/success.png);
+        background-size: contain;
+        margin-right: 15px;
+    }
+</style>
+
+<script>
+</script>
+
+<body>
+
+
+    <!-- items del menu hamburguesa -->
+    <nav id="nav_menu">
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="concepto.html">Concepto</a></li>
+            <li><a href="especialistas.html">Especialistas</a></li>
+            <li><a href="terapias.html">Terapias y servicios</a></li>
+            <li><a href="aparatología.html">Aparatología</a></li>
+            <li><a href="noticias.html">Noticias</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="cita.html">Solicita tu cita</a></li>
+        </ul>
+
+    </nav>
+    <header>
+        <div id="bar_menu"> <!-- para menu hamburguesa -->
+            <img src="Images/menu.png" alt="menu">
+        </div>
+
+        <div id="logo">
+            <img src="Images/logo.jpg" alt="logo">
+
+        </div>
+        <h1>CENTRO CLÍNICO ESTÉTICO</h1>
+
+    </header>
+
+    <div class="cabecera">
+        <!-- tendra una img de fondo desde css -->
+    </div>
+    <main>
+        <section id="todos_textos">
+            <p id="primerP">Terapias y tratamientos faciales y corporales estéticos, antienvejecimiento, dermatología,
+                cosmetología y
+                más, realizados por especialistas en cirugía plástica y dermatología.</p>
+            <article>
+                <h2 class="h2forAll">BELLEZA, SALUD, INNOVACIÓN Y EXPERIENCIA.</h2>
+                <figure class="fotoh2"><img src="Images/tratafaciales.PNG" alt="tratafaciales"></figure>
+                <p>Somos un centro clínico estético integral, diseñado con espacios exclusivos para brindarle a nuestros
+                    clientes una experiencia única, combinando profesionalismo con innovadores equipos y tratamientos
+                    estéticos; creado con el objetivo claro de promover el bienestar y la belleza</p>
+                <p class="boton_enlace"><a href="concepto.html">Concepto</a></p>
+            </article>
+
+            <article>
+                <h2 class="h2forAll">TERAPIAS Y SERVICIOS MÉDICOS</h2>
+                <figure class="fotoh2"><img src="Images/tratalaser.PNG" alt="tratalaser"></figure>
+                <section id="column">
+                    <div class="tratamientos">
+
+                        <h3>TRATAMIENTOS FACIALES</h3>
+                        <p>Ofrecemos una amplia variedad de los más efectivos y avanzados tratamientos y terapias no
+                            invasivas, faciales para hombres y mujeres de todas las edades.</p>
+                        <p>Limpieza facial profunda, hidratación, despigmentantes, peelings, terapias para el
+                            rejuvenecimiento de la piel y antienvejecimiento con reducción de líneas de expresión y
+                            arrugas,
+                            tratamientos para cicatrices de acné, terapias para labios y contorno de los ojos, ácido
+                            hialurónico, toxina botulínica…</p>
+                        <p>Todo adaptado a sus necesidades individuales, con nuestros médicos altamente calificados, lo
+                            último en tecnología y los mejores productos para asegurarse de garantizar los mejores
+                            resultados..</p>
+                        <p class="boton_enlace"><a href="terapias.html">Terapias y servicios</a></p>
+                    </div>
+                    <div class="tratamientos">
+                        <h3>TRATAMIENTOS CON LASER</h3>
+                        <ul>
+                            <li>Depilación por Zona o Completa</li>
+                            <li>Remover Tatuaje de 5 a 30 cm</li>
+                            <li> Lifting Facial (Rejuvenecimiento Facial) con Láser Co2 Fraccionado</li>
+                            <li>Blefaroplastia no Quirúrgica con Láser CO2 Fraccionado </li>
+                            <li>Tratamiento para Micosis </li>
+                            <li>Tratamiento con Láser CO2 para Cicatrices Menores y Mayores de 10 cm</li>
+                            <li>Cicatrices de Acné</li>
+                            <li>Estrías </li>
+                            <li>Escote y Manos</li>
+                        </ul>
+                        <p class="boton_enlace"><a href="terapias.html">Terapias y servicios</a></p>
+
+                    </div>
+                    <div class="tratamientos">
+                        <h3>TRATAMIENTOS CORPORALES APARATOLOGÍA</h3>
+                        <ul>
+                            <li>HIFEM Slim Beauty o Boddy Sculp</li>
+                            <li>Radiofrecuencia EXILIS (Rostro y Cuello / Brazos / Abdomen / Muslo / Espalda / Glúteos /
+                                Muslo)</li>
+                            <li>Radiofrecuencia Tripolar Facial</li>
+                            <li>Radiofrecuencia Sextopolar Corporal</li>
+                            <li>Radiofrecuencia + Ultracavitación</li>
+                            <li>Radiofrecuencia + Lipoláser + Ultracavitación</li>
+                            <li>Radiofrecuencia con Microagujas (Rostro y Cuello / Estrías Abdomen / Estrías en Senos /
+                                Estrías Glúteos / Celulitis o Pefe en Glúteos / Celulitis o PEFE en Muslo / Celulitis o
+                                PEFE
+                                en Glúteos y Muslo)</li>
+                            <li>Radiofrecuencia con Microagujas (HiperHidrosis)</li>
+
+                        </ul>
+                        <p class="boton_enlace"><a href="aparatología.html">Aparatología</a></p>
+
+                    </div>
+                </section>
+
+            </article>
+
+            <article id="prin">
+                <h2>NUESTROS PROFESIONALES TE OFRECEN UN SERVICIO PERSONALIZADO</h2>
+
+                <p>Gracias al conocimiento exhaustivo de las terapias y técnicas utilizadas por nuestro equipo de
+                    médicos, que cuentan con una amplia formación y calificada experiencia en el campo de la medicina
+                    estética, regenerativa, antienvejecimiento y dermatología XXXXXXXXXX tiene la clave perfecta para
+                    que logres los resultados deseados.</p>
+
+                <div id="parafotos" class="foto_esp">
+                    <figure>
+                        <img src="Images/nuestrosProf1.PNG" alt="nuestrosProf1">
+                        <img src="Images/nuestrosProf2.PNG" alt="nuestrosProf2">
+                        <img src="Images/nustrosprof3.PNG" alt="nuestrosProf3">
+                        <img src="Images/nuestrosProf4.PNG" alt="nuestrosProf4">
+                        <img src="Images/nuestrosProf5.PNG" alt="nuestrosProf5">
+                    </figure>
+                </div>
+
+
+
+
+                <p class="boton_enlace"><a href="especialistas.html">Te invitamos a conocernos</a></p>
+
+                <section id="depie">
+                    <ul>
+                        <li>NUESTROS PROFESIONALES</li>
+                        <li>EQUIPO DE MÉDICOS</li>
+                        <li>BELLEZA, SALUD, INNOVACIÓN Y EXPERIENCIA</li>
+                        <li>TE OFRECEN UN SERVICIO PERSONALIZADO</li>
+                    </ul>
+                </section>
+
+            </article>
+
+        </section>
+
+    </main>
+    <footer id="pie">
+        <section id="grey">
+            <h4>AGENDA TU CITA</h4>
+            <p id="par_1_grey">TE SORPRENDARAS AL VER TODO LO QUE PODEMOS HACER POR TI, POR TU SALUD, BIENESTAR Y
+                BELLEZA</p>
+            <p id="par_2_grey">
+                Te ofrecemos toda la orientacion necesaria tras evaluar y conocer a fondo tus necesidades, proponemos
+                una experencia de bienestar, basada en soluciones personalizadas para ayudarte a lograr los resultados
+                deseados.
+            <article class="boton_pie"><a href="contacto.html">CONTACTANOS</a></article>
+            </p>
+
+
+        </section>
+        <section id="black">
+            <div id="left">
+                <h4>CENTRO CLINICO ESTETICO</h4>
+                <P id="par_1_black">Terapias y tratamientos faciales y corporales esteticos, antienvejecimiento,
+                    dermatologia, cosmetologia y mas, realizados por especialistas en cirugia plastica y dermatologia.
+                </P>
+            </div>
+            <div id="center">
+                <ul class="menu_pie">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="concepto.html">Concepto</a></li>
+                    <li><a href="especialistas.html">Especialistas</a></li>
+                    <li><a href="terapias.html">Terapias y servicios</a></li>
+                    <li><a href="aparatología.html">Aparatología</a></li>
+                    <li><a href="noticias.html">Noticias</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="cita.html">Solicita tu cita</a></li>
+                </ul>
+
+            </div>
+            <div id="right">
+                <h4 style="text-transform: uppercase;">¡Síguenos en nuestras redes sociales!</h4>
+                <figure id="click"><img src="Images/click.png" alt="click"></figure>
+
+                <div id="redes">
+                    <figure>
+                        <a href="https://www.instagram.com/" target="_blank"><img src="Images/redes/instagram.png"
+                                alt="inst"></a>
+
+                    </figure>
+
+                    <figure>
+                        <a href="https://twitter.com/" target="_blank"><img src="Images/redes/twitter.png" alt="tw"></a>
+
+                    </figure>
+                    <figure>
+                        <a href="https://es-es.facebook.com/" target="_blank"><img src="Images/redes/facebook.png"
+                                alt="fb"></a>
+                    </figure>
+
+                    <figure>
+                        <a href="https://www.youtube.com/" target="_blank"><img src="Images/redes/youtube.png"
+                                alt="yt"></a>
+
+                    </figure>
+
+
+                </div>
+                <h4>DIRECCION</h4>
+                <h4>TELEFONO</h4>
+                <h4>E-MAIL</h4>
+
+                <figure id="whatsapp">
+                    <a href="https://web.whatsapp.com/" target="_blank"><img src="Images/whatsapp.png"
+                            alt="whatsapp"></a>
+
+                </figure>
+
+            </div>
+
+
+        </section>
+
+
+
+    </footer>
+
+</body>
+
+</html>

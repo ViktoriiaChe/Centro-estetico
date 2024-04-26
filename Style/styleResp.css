@@ -1,0 +1,394 @@
+/*Inicio*/
+
+@media screen and (max-width:1200px){
+    header h1{
+        margin-left: 10px;
+    }
+    #logo {
+        width: 75px;
+    }
+    
+}
+
+@media screen and (max-width:795px) {
+    header h1 {
+        font-size: 2.5em;
+        padding-top: 10px;
+        margin-left: 12px;
+    }
+
+    #bar_menu {
+        width: 35px;
+        height: 35px;
+    }
+
+    #logo {
+        width: 65px;
+    }
+
+    main {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    #column {
+        display: block;
+        margin: 0 auto;
+
+    }
+
+    #column .tratamientos {
+        width: 100%;
+
+    }
+
+    .foto_esp {
+        width: 400px;
+        height: 400px;
+
+
+    }
+
+
+}
+
+@media screen and (max-width:600px) {
+
+    main {
+        width: 100%;
+        font-size: .9em;
+    }
+
+    .foto_esp {
+        width: 300px;
+        height: 300px;
+
+    }
+
+}
+
+@media screen and (max-width:432px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    #logo {
+        margin-left: 30px;
+    }
+
+    main {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .foto_esp {
+        width: 300px;
+        height: 300px;
+
+    }
+
+}
+
+@media screen and (max-width:430px) {
+
+    .foto_esp {
+        width: 200px;
+        height: 200px;
+
+    }
+
+    #black {
+        padding: 20px;
+        display: block;
+    }
+
+    #left,
+    #center,
+    #right {
+        width: 100%;
+
+    }
+
+}
+
+/*Concepto*/
+@media screen and (max-width:1200px) {
+    main {
+        width: 100%;
+    }
+
+    #fotos_de_centro {
+        margin: -100px 50px;
+    }
+
+    .pimg img {
+        width: 50%;
+        height: 20%;
+    }
+
+    .ptext {
+        font-size: .7em;
+
+    }
+
+    #medio,
+    #medio1 {
+        width: 100%;
+        height: auto;
+    }
+
+
+
+}
+
+@media screen and (max-width:800px) {
+
+    main {
+        width: 100%;
+    }
+
+    #fotos_de_centro {
+       
+        display: none;
+    }
+
+
+    #video,
+    #video_2 {
+        width: 700px;
+    }
+
+    #reproductor,
+    #reproductor1 {
+        width: 700px;
+
+    }
+
+    #medio,
+    #medio1 {
+        width: 90%;
+        height: auto;
+    }
+
+    #reproducir,
+    #silenciar,
+    #reproducir1,
+    #silenciar1 {
+        padding: 5px 10px;
+        width: 80px;
+        margin-right: 0px;
+    }
+
+    #botones,
+    #botones1 {
+        width: 130px;
+        padding: 3px;
+    }
+
+
+}
+
+@media screen and (max-width:600px) {
+
+    main,
+    header,
+    footer {
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    #video,
+    #video_2 {
+        width: 500px;
+    }
+
+    #reproductor,
+    #reproductor1 {
+        width: 500px;
+
+    }
+
+    #medio,
+    #medio1 {
+        width: 100%;
+        height: auto;
+    }
+
+   
+    #botones,
+    #botones1 {
+        width: 130px;
+        padding: 3px;
+    }
+}
+
+@media screen and (max-width:500px) {
+
+    #video,
+    #video_2 {
+        width: 400px;
+    }
+
+    #reproductor,
+    #reproductor1 {
+        width: 400px;
+
+    }
+
+    #botones,
+    #botones1 {
+        width: 120px;      
+}
+}
+
+/*Especialistas*/
+@media screen and (max-width:795px) {
+    #textos_espec .espe {
+        width: 400px;
+        padding: 20px;
+
+    }
+    #textos_espec .espe .parEsp {
+        font-size: .8em;
+        float: right;
+        height: 40vh;
+        margin-top: 40px;
+        margin-left: 10px;
+    }
+    #logo{
+        width: 120px;
+    }
+
+}
+
+/*Contacto*/
+@media screen and (max-width:1000px) {
+
+    #contactoheader {
+        width: 90%;
+        margin: 0 auto;   
+
+    }
+
+    #pagina_cont {
+        width: 90%;
+        padding-right: 10px;  
+
+    }
+
+    #pagina_cont #izq {
+        font-size: .8em;
+
+    }
+
+    #pagina_cont #izq figure,
+    p {
+        width: 90%;
+
+    }
+
+    #pagina_cont #der_form p,
+    textarea {
+        width: 90%;
+
+    }
+
+    input,
+    textarea {
+        padding: 8px;
+        margin: 3px;
+    }
+
+    .revisar_gener {
+
+        height: 30px;
+        width: 40px;
+        font-size: .8rem;
+        background-color: #868686;
+    }
+
+    #intr_numeros,
+    #resultado {
+        width: 60px;
+    }
+
+
+}
+
+@media screen and (max-width:375px) {
+
+    #contactoheader {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #pagina_cont {
+        width: 100%;
+    }
+
+    #pagina_cont #izq {
+        font-size: .7em;
+    }
+
+    #pagina_cont #izq figure,
+    p {
+        width: 90%;
+    }
+
+    #pagina_cont #der_form p,
+    textarea {
+        width: 90%;
+    }
+
+    input,
+    textarea {
+        padding: 5px;
+        margin: 1px;
+    }
+
+    .revisar_gener {
+
+        height: 20px;
+        width: 30px;
+        font-size: .7rem;
+        background-color: #868686;
+    }
+
+    #intr_numeros,
+    #resultado {
+        width: 45px;
+    }
+
+
+
+}
+
+
+/*Aparatologia Terapia*/
+@media screen and (max-width:1200px) {
+    #aparatologia figure {
+        width: 500px;
+    }
+   
+}
+
+@media screen and (max-width:700px) {
+    #aparatologia figure {
+        width: 300px;
+
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #terapiasServ figure {
+        width: 500px;
+
+    }  
+}
+
+@media screen and (max-width:700px) {
+    #terapiasServ figure {
+        width: 300px;
+
+    }   
+}

@@ -1,0 +1,34 @@
+$(document).ready(function() {
+	$(".caja1").mouseover(function(){
+		$('.mascara').attr('opacity',1);
+		});
+		
+	$(".caja1").mouseout(function(){
+		$('.mascara').attr('opacity',0);
+		});
+		
+	$(".caja2").mouseover(function(){
+		$('.mascara').attr('opacity',1);
+		});
+		
+	$(".caja2").mouseout(function(){
+		$('.mascara').attr('opacity',0);
+		});
+		
+	$(".caja3").mouseover(function(){
+		$('.mascara').attr('opacity',1);
+		});
+		
+	$(".caja3").mouseout(function(){
+		$('.mascara').attr('opacity',0);
+		});
+		
+	$(".caja4").mouseover(function(){
+		$('.mascara').attr('opacity',1);
+		});
+		
+	$(".caja4").mouseout(function(){
+		$('.mascara').attr('opacity',0);
+		});
+		
+});/*Cierre de la escucha*/

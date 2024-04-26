@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Proyecto Centro de Estética Concepto</title>
+	<link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="Style/style.css">
+	<link rel="stylesheet" href="Style/styleResp.css">
+	<script src="jQuery/jquery-3.7.1.min.js"></script>
+	<script src="JS/js.js"></script>
+	<script src="JS/concepto_reproductor.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script src="jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+	<link rel="stylesheet" href="jquery.fancybox-1.3.4/fancybox/jquery.fancybox-1.3.4.css" media="screen">
+
+</head>
+
+<style>
+	h2 {
+		text-align: center;
+		color: goldenrod;
+	}
+
+	
+</style>
+<script>
+
+
+
+	$(function () {
+
+		$(".pimg").each(function (index) {
+			$('#fotos_de_centro')
+				.animate({
+					height: '100vh',
+				}, 3000);
+
+			$("#img1").delay(2000 * index).fadeIn(2000).animate({
+				'margin-left': '-25%',
+				'margin-top': '-12%'
+			}, 3000);
+
+			$("#img2").delay(2000 * index).fadeIn(2000).animate({
+				'margin-left': '25%',
+				'margin-top': '-12%'
+			}, 3000);
+
+			$("#img3").delay(2000 * index).fadeIn(2000).animate({
+				'margin-left': '-25%',
+				'margin-top': '14%'
+			}, 3000);
+
+			$("#img4").delay(2000 * index).fadeIn(2000).animate({
+				'margin-left': '25%',
+				'margin-top': '14%'
+			}, 3000);
+
+
+		});
+
+		/*$(".pimg").each(function (index) {
+			$("#img1").delay(2000 * index).fadeIn(2000).animate({
+				'margin-left': '-50%',
+				//'margin-top': '-150px'
+			}, 3000);
+
+			$("#img2").delay(2000 * index).fadeIn(2000).animate({
+				'margin-left': '50%',
+
+			}, 3000);
+
+			$("#img3").delay(2000 * index).fadeIn(2000).animate({
+				'margin-left': '-50%',
+				'margin-top': '50%'
+			}, 3000);
+
+			$("#img4").delay(2000 * index).fadeIn(2000).animate({
+				'margin-left': '50%',
+				'margin-top': '50%'
+			}, 3000);
+
+
+		});*/
+
+	})
+
+
+
+	//declarar las variables que vamos a utilizar, son globales
+var maximo1, mmedio1, reproducir1, barra1, progreso1, silenciar1, volumen1, bucle1;
+function iniciar1() {
+    //maximo para establecer el tamaño max de la barra del progreso 400px
+    maximo1 = 400;
+    mmedio1 = document.getElementById("medio1");
+    reproducir1 = document.getElementById("reproducir1");
+    barra1 = document.getElementById("barra1");
+    progreso1 = document.getElementById("progreso1");
+    silenciar1 = document.getElementById("silenciar1");
+    volumen1 = document.getElementById("volumen1");
+
+    //pongo los elementos a la espera de que ocurra un evento
+    reproducir1.addEventListener("click", presionar1);
+    silenciar1.addEventListener("click", sonido1);
+    barra1.addEventListener("click", mover1);
+    volumen1.addEventListener("change", nivel1);
+
+}
+
+function presionar1() {
+    if (!mmedio1.paused && !mmedio1.ended) {
+        mmedio1.pause();
+        reproducir1.value = ">";
+    } else {
+
+        mmedio1.play();
+        reproducir1.value = "||";
+        //el video se esta reproduciendo
+        bucle1 = setInterval(estado1, 1000);
+    }
+}
+function estado1() {
+    if (!mmedio1.ended) {
+        var largo1 = parseInt(mmedio1.currentTime * maximo1 / mmedio1.duration);
+        progreso1.style.width = largo1 + "px";
+    } else {
+        progreso1.style.width = "0px";
+        reproducir1.value = ">";
+    }
+}
+function sonido1() {
+    if (silenciar1.value == "Silencio") {
+        mmedio1.muted = true;
+        silenciar1.value = "Sonido";
+
+    } else {
+        mmedio1.muted = false;
+        silenciar1.value = "Silencio";
+
+    }
+}
+
+function nivel1() {
+    mmedio1.volume = volumen1.value;
+}
+function mover1(evento) {
+    if (!mmedio1.paused && !mmedio1.ended) {
+        var ratonX1 = evento1.offsetX - 2;
+        if (ratonX1 < 0) {
+            ratonX1 = 0;
+
+        } else if (ratonX1 > maximo1) {
+            ratonX1 = maximo1;
+        }
+        var tiempo1 = ratonX1 * mmedio1.duration / maximo1;
+        mmedio1.currentTime = tiempo1;
+        progreso1.style.width = ratonX1 + "px";
+
+    }
+
+}
+
+window.addEventListener("load", iniciar1);
+</script>
+
+<body>
+
+
+	<!-- items del menu hamburguesa -->
+	<nav id="nav_menu">
+		<ul class="menu">
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="concepto.html">Concepto</a></li>
+			<li><a href="especialistas.html">Especialistas</a></li>
+			<li><a href="terapias.html">Terapias y servicios</a></li>
+			<li><a href="aparatología.html">Aparatología</a></li>
+			<li><a href="noticias.html">Noticias</a></li>
+			<li><a href="contacto.html">Contacto</a></li>
+			<li><a href="cita.html">Solicita tu cita</a></li>
+		</ul>
+
+	</nav>
+	<header>
+		<div id="bar_menu"> <!-- para menu hamburguesa -->
+			<img src="Images/menu.png" alt="menu">
+		</div>
+
+		<div id="logo">
+			<img src="Images/logo.jpg" alt="logo">
+
+		</div>
+		<h1>CENTRO CLÍNICO ESTÉTICO</h1>
+
+	</header>
+
+	<div class="cabecera">
+		<!-- una img de fondo desde css -->
+	</div>
+	<main>
+		<h2 class="h2forAll">NUESTRO CONCEPTO</h2>
+
+
+		<section id="fotos_de_centro">
+			<article id="art">
+				<div class="pimg" id="img1">
+					<img src="Images/nuestrosProf1.PNG" alt="p1" id="foto1">
+					<p class="ptext">En XXXXXXXXX tendrás una experiencia excepcional, nuestros espacios exclusivos
+						están pensados
+						y
+						diseñados para atenderle y prestarle el SERVICIO VIP que mereces.</p>
+				</div>
+
+				<div class="pimg" id="img2">
+					<img src="Images/nuestrosProf5.PNG" alt="p2" id="foto2">
+					<p class="ptext">Todos nuestros TRATAMIENTOS Y TERAPIAS son APLICADOS POR NUESTRO GRUPO DE MÉDICOS,
+						que
+						cuentan con una AMPLIA FORMACIÓN Y CALIFICADA EXPERIENCIA en el campo de la medicina estética,
+						regenerativa, antienvejecimiento y dermatología.
+					</p>
+				</div>
+
+				<div class="pimg" id="img3">
+					<img src="Images/nuestrosProf2.PNG" alt="p3" id="foto3">
+					<p class="ptext">En xxxxxxxxxxx contamos con EQUIPOS DE TECNOLOGÍAS INNOVADORAS para aplicar LOS
+						ÚLTIMOS Y MÁS
+						AVANZADOS TRATAMIENTOS ESTÉTICOS DE ALTO IMPACTO no invasivos, que permiten lograr resultados
+						deseados para rejuvenecer tu rostro, moldear tu cuerpo y vencer otros efectos del paso del
+						tiempo.
+					</p>
+				</div>
+
+				<div class="pimg" id="img4">
+					<img src="Images/nuestrosProf4.PNG" alt="p4" id="foto4">
+					<p class="ptext">En xxxxxxxxxxx contamos con EQUIPOS DE TECNOLOGÍAS INNOVADORAS para aplicar LOS
+						ÚLTIMOS Y MÁS
+						AVANZADOS TRATAMIENTOS ESTÉTICOS DE ALTO IMPACTO no invasivos, que permiten lograr resultados
+						deseados para rejuvenecer tu rostro, moldear tu cuerpo y vencer otros efectos del paso del
+						tiempo.
+					</p>
+				</div>
+			</article>
+
+		</section>
+
+
+		<section id="video">
+			<a href="https://www.youtube.com/watch?v=mRqSGj1edw4" class="vervideo" title="VIDEO CENTRO CLÍNICO ESTÉTICO
+            ">VIDEO CENTRO CLÍNICO ESTÉTICO</a>
+		</section>
+
+		<section>
+			<h2>LAS MEJORES MARCAS DE PRODUCTOS
+			</h2>
+			<p>En xxxxxxxxxxxxx solo empleamos los mejores y más novedosos productos reconocidos como líderes del
+				mercado por su alta calidad en todos los tratamientos faciales y corporales que aplicamos para conseguir
+				perfectos resultados y cuidar de ti.</p>
+			<p class="boton_enlace"><a href="especialistas.html">Nuestros especialistas</a></p>
+
+			<h2>TERAPIAS Y SERVICIOS MÉDICOS
+			</h2>
+			<p>Ofrecemos una amplia variedad de los más efectivos y avanzados tratamientos y terapias no invasivas,
+				faciales, corporales y capilares para hombres y mujeres de todas las edades.</p>
+
+			<!-- for videos -->
+
+			<section id="video_2">
+				<h2>Video 1</h2>
+				<section id="reproductor">
+					<video id="medio" width="800" height="420">
+						<source src="videos/135151 (720p).mp4">
+
+					</video>
+					<nav class="bot">
+						<div id="botones">
+							<input type="button" id="reproducir" value=">">
+							<input type="button" id="silenciar" value="Silencio">
+						</div>
+						<div id="barra">
+							<div id="progreso"></div>
+						</div>
+						<div id="control">
+							<input type="range" id="volumen" min="0" max="1" step="0.1" value="0.6">
+						</div>
+						<div class="recuperar"></div>
+					</nav>
+				</section>
+
+				<h2>Video 2</h2>
+				<section id="reproductor1">
+					<video id="medio1" width="800" height="420">
+						<source src="videos/massage_-_701 (240p).mp4">
+
+					</video>
+					<nav class="bot">
+						<div id="botones1">
+							<input type="button" id="reproducir1" value=">">
+							<input type="button" id="silenciar1" value="Silencio">
+						</div>
+						<div id="barra1">
+							<div id="progreso1"></div>
+						</div>
+						<div id="control1">
+							<input type="range" id="volumen1" min="0" max="1" step="0.1" value="0.6">
+						</div>
+						<div class="recuperar"></div>
+					</nav>
+				</section>
+			</section>
+			<!-- fid de videos -->
+
+
+
+			<p class="boton_enlace"><a href="terapias.html">Ver terapias y servicios medicos</a></p>
+		</section>
+
+
+
+
+	</main>
+	<footer id="pie">
+		<section id="grey">
+			<h4>AGENDA TU CITA</h4>
+			<p id="par_1_grey">TE SORPRENDARAS AL VER TODO LO QUE PODEMOS HACER POR TI, POR TU SALUD, BIENESTAR Y
+				BELLEZA</p>
+			<p id="par_2_grey">
+				Te ofrecemos toda la orientacion necesaria tras evaluar y conocer a fondo tus necesidades, proponemos
+				una experencia de bienestar, basada en soluciones personalizadas para ayudarte a lograr los resultados
+				deseados.
+			<article class="boton_pie"><a href="contacto.html">CONTACTANOS</a></article>
+			</p>
+
+
+		</section>
+		<section id="black">
+			<div id="left">
+				<h4>CENTRO CLINICO ESTETICO</h4>
+				<P id="par_1_black">Terapias y tratamientos faciales y corporales esteticos, antienvejecimiento,
+					dermatologia, cosmetologia y mas, realizados por especialistas en cirugia plastica y dermatologia.
+				</P>
+			</div>
+			<div id="center">
+				<ul class="menu_pie">
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="concepto.html">Concepto</a></li>
+					<li><a href="especialistas.html">Especialistas</a></li>
+					<li><a href="terapias.html">Terapias y servicios</a></li>
+					<li><a href="aparatología.html">Aparatología</a></li>
+					<li><a href="noticias.html">Noticias</a></li>
+					<li><a href="contacto.html">Contacto</a></li>
+					<li><a href="cita.html">Solicita tu cita</a></li>
+				</ul>
+
+			</div>
+			<div id="right">
+				<h4 style="text-transform: uppercase;">¡Síguenos en nuestras redes sociales!</h4>
+				<figure id="click"><img src="Images/click.png" alt="click"></figure>
+				<div id="redes">
+                    <figure>
+                        <a href="https://www.instagram.com/" target="_blank"><img src="Images/redes/instagram.png" alt="inst"></a>
+
+                    </figure>
+
+                    <figure>
+                        <a href="https://twitter.com/" target="_blank"><img src="Images/redes/twitter.png" alt="tw"></a>
+
+                    </figure>
+                    <figure>
+                        <a href="https://es-es.facebook.com/" target="_blank"><img src="Images/redes/facebook.png" alt="fb"></a>
+                    </figure>
+
+                    <figure>
+                        <a href="https://www.youtube.com/" target="_blank"><img src="Images/redes/youtube.png" alt="yt"></a>
+
+                    </figure>
+
+
+                </div>
+				<h4>DIRECCION</h4>
+				<h4>TELEFONO</h4>
+				<h4>E-MAIL</h4>
+
+				<figure id="whatsapp">
+					<a href="https://web.whatsapp.com/" target="_blank"><img src="Images/whatsapp.png" alt="whatsapp"></a>
+
+				</figure>
+
+			</div>
+
+
+		</section>
+
+
+
+	</footer>
+
+</body>
+
+</html>
